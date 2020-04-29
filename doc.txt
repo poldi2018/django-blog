@@ -9,6 +9,12 @@ sudo pip install virtualenvwrapper
 source "/usr/local/bin/virtualenvwrapper.sh" > ~/.zshrc
 mkvirtualenv [name]
 source ~/.zshrc
+#activation of virtual environment
+cd ~/.virtualenvs/foo
+source bin/activate
+
+
+
 
 
 CREATION OF APP
