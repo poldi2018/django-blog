@@ -108,6 +108,7 @@ echo -e "*.sqlite3\n*.pyc\__pycache__/" > .gitignore
 # travis integration
 grab from 'build unknown' the markdown
 [![Build Status](https://travis-ci.org/poldi2018/django-blog.svg?branch=master)](https://travis-ci.org/poldi2018/django-blog)
+create .travis.yml file
 
 
 
