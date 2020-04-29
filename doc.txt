@@ -11,8 +11,6 @@ mkvirtualenv [name]
 source ~/.zshrc
 
 
-
-
 CREATION OF APP
 # create empty project
 #startproject via django-admin:
