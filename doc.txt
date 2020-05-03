@@ -170,6 +170,8 @@ pip install gunicorn
 # update requirements.txt
 # create entry in ALLOWED_HOSTS to reflext heroku.com URL:
 poldis-blog-test-app.herokuapp.com
+# connect to github in heroku dashboard or add git remote url:
+heroku git:remote -a poldis-blog-test-app
 
 
 
