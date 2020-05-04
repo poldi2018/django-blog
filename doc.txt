@@ -9,15 +9,13 @@ sudo pip install whitenoise
 {% load bootstrap_tags %}
 #Installation of virtualenvironment:
 sudo pip install virtualenvwrapper
-source "/usr/local/bin/virtualenvwrapper.sh" > ~/.zshrc
+source "/usr/local/bin/virtualenvwrapper.sh" or put in ~/.zshrc to load at startup
 mkvirtualenv [name]
-source ~/.zshrc
 #activation of virtual environment
 cd ~/.virtualenvs/foo
 source bin/activate
 OR: source ~/.virtualenvs/foo/bin/activate
-# for working on environment and do changes:
-workon [environment name]
+OR: workon [environment name]
 #use pillow for image handling
 pip install pillow
 
@@ -117,12 +115,12 @@ chmod +x manage.py
 ./manage.py runserver
 
 # prepping .gitignore file:
-echo -e "*.sqlite3\n*.pyc\__pycache__/" > .gitignore
+echo -e "*.sqlite3\n*.pyc\n__pycache__/\nenv.py" > .gitignore
 
 # travis integration
 grab from 'build unknown' the markdown
 [![Build Status](https://travis-ci.org/poldi2018/django-blog.svg?branch=master)](https://travis-ci.org/poldi2018/django-blog)
-
+---------
 create .travis.yml file:
 language: python
 python:
@@ -130,6 +128,7 @@ python:
 install: "pip install -r requirements.txt"
 script:
     - SECRET_KEY="whatever" ./manage.py test
+---------
 
 # creation of models and forms
 # perform makemigrations:
@@ -168,7 +167,7 @@ web: gunicorn blog.wsgi:application
 # install gunicorn library:
 pip install gunicorn
 # update requirements.txt
-# create entry in ALLOWED_HOSTS to reflext heroku.com URL:
+# create entry in ALLOWED_HOSTS to reflect heroku.com URL:
 poldis-blog-test-app.herokuapp.com
 # connect to github in heroku dashboard or add git remote url:
 heroku git:remote -a poldis-blog-test-app
