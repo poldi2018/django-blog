@@ -27,4 +27,4 @@ A simple blog app written using Django
 
 
 
-# This is anaother Text
+# This is another Text
